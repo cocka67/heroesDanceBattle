@@ -188,12 +188,7 @@ function arena(firstHero, secondHero) {
 
   let randomNumber = Math.round(Math.random() * 100) // диапазон от 0 до 100
 
-  if (fistHeroSum == 0){
-    winner = secondHero;
-  } 
-  if (secondHeroSum == 0){
-    winner = firstHero;
-  }
+  
 
   if (fistHeroSum > secondHeroSum) {
     if (randomNumber <= fistHeroSum) {
@@ -209,7 +204,12 @@ function arena(firstHero, secondHero) {
     }
   }
 
-
+  if (fistHeroSum == 0){
+    winner = secondHero;
+  } 
+  if (secondHeroSum == 0){
+    winner = firstHero;
+  }
 
   if (winner) {
     console.log(`Ритмично чествуем победителя: ${winner.name}`);
